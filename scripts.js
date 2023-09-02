@@ -80,6 +80,10 @@ window.addEventListener('keydown', (e) => {
             h2.textContent = result;
         }  
         lastInput = 'equal';
+    } else if(e.key === 'Backspace') {
+        if(lastInput === 'number') {
+            h2.textContent = h2.textContent.slice(0, h2.textContent.length-1);
+        }
     }
 });
 
